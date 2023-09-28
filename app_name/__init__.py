@@ -1,0 +1,18 @@
+import logging
+from configparser import ConfigParser
+from datetime import datetime
+from io import BytesIO, StringIO
+from .config import app
+from .core import *
+# from .utils import *
+# from .plugins import *
+
+# Logging at the start to catch everything
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.WARNING,
+    handlers=[
+        logging.StreamHandler()
+    ]
+)
+LOGS = logging.getLogger(__name__)
